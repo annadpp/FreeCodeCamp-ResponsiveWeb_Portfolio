@@ -1,0 +1,553 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;800&display=swap");
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes title {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes stripes {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(46px);
+  }
+}
+
+@keyframes color-change {
+  0% {
+    color: var(--orange);
+  }
+  25% {
+    color: var(--pink);
+  }
+  50% {
+    color: var(--green);
+  }
+  75% {
+    color: var(--blue);
+  }
+  100% {
+    color: var(--orange);
+  }
+}
+
+:root {
+  --green: #3ecfc1;
+  --orange: #fe7151;
+  --pink: #ff8fe7;
+  --yellow: #ffc803;
+  --blue: #90a8ed;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: white;
+}
+
+a {
+  color: black;
+}
+
+#projects p,
+#contact p,
+#about p {
+  font-size: 1.25rem;
+}
+
+footer p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 5rem;
+  margin-left: 1%;
+  color: white;
+}
+
+h2 {
+  font-size: 3.5rem;
+  padding-left: 3%;
+  margin-bottom: 4%;
+  width: 25%;
+}
+
+h2 span {
+  display: table-cell;
+}
+
+h2:hover span {
+  animation: title 0.8s infinite;
+  cursor: pointer;
+}
+
+h2 span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+h2 span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+h2 span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+h2 span:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+h2 span:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+h2 span:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+h2 span:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+h2 span:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+h2 span:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+h2 span:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+#portfolio-title h2 {
+  margin-bottom: 0;
+}
+
+h3 {
+  text-shadow: 2px 2px 1px white;
+  font-size: 2rem;
+}
+
+#welcome-section {
+  height: 100vh;
+  background-color: var(--yellow);
+  border-bottom: 4px solid black;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  mix-blend-mode: difference;
+}
+
+#menu {
+  margin-right: 1%;
+}
+
+#menu a {
+  color: white;
+}
+
+#menu a:hover,
+#projects a:hover {
+  text-decoration: line-through;
+}
+
+#margin-top {
+  height: 110px;
+  background-color: white;
+  border-bottom: 4px solid black;
+}
+
+#scroll {
+  background-color: black;
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  bottom: 100px;
+  left: -10px;
+  width: 100.5%;
+  height: 40px;
+  transform: rotate(2deg);
+  animation: opacity 2s infinite;
+}
+
+#scroll p {
+  font-size: 2rem;
+  color: white;
+}
+
+#portfolio-title {
+  display: flex;
+
+  height: 250px;
+  background-color: white;
+  border-bottom: 2px solid black;
+  display: flex;
+  align-items: center;
+}
+
+#top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid white;
+}
+
+#top a {
+  color: white;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.project-tile {
+  border: 2px solid black;
+  padding: 7%;
+}
+
+#grid-1 {
+  background-color: var(--pink);
+}
+
+#grid-2 {
+  background-color: var(--blue);
+}
+
+#grid-3 {
+  background-color: var(--orange);
+}
+
+#grid-4 {
+  background-color: var(--green);
+}
+
+#grid-5 {
+  background-color: var(--yellow);
+}
+
+#grid-6 {
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-base {
+  position: relative;
+  width: 400px;
+  height: 270px;
+  border: 4px solid black;
+  box-shadow: 10px 10px;
+  margin-bottom: 35px;
+  cursor: pointer;
+}
+
+.img-base img:hover {
+  mix-blend-mode: lighten;
+  background-color: none;
+}
+
+.img-base img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bg {
+  position: absolute;
+  left: -46px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+
+  background: repeating-linear-gradient(
+    -55deg,
+    #ffffff 2px,
+    #000000 4px,
+    #000000 22px,
+    #ffffff 22px,
+    #ffffff 40px
+  );
+
+  animation: stripes 0.8s linear infinite;
+}
+
+.button-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid black;
+  transform: rotate(10deg);
+  height: 80px;
+  width: 250px;
+  transition: all 0.25s ease-out 50ms;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.button-link:hover {
+  transform: rotate(0deg);
+}
+
+.button-link a {
+  color: black;
+  font-weight: bold;
+}
+
+#contact {
+  border-top: 2px solid black;
+  border-bottom: 4px solid black;
+  padding-top: 4%;
+  padding-bottom: 6%;
+}
+
+#links {
+  display: flex;
+  margin-left: 4%;
+}
+
+#links span {
+  display: inline-block;
+  transform: rotate(-15deg);
+}
+
+.button-link svg {
+  display: none;
+}
+
+.button-link:hover * {
+  display: inline;
+}
+
+#contact div p {
+  margin-bottom: 3%;
+  padding-left: 4%;
+}
+
+#twitter {
+  margin-top: 100px;
+  margin-right: 2%;
+}
+
+#linkedin {
+  margin: 50px 0;
+  margin-right: 2%;
+}
+
+#github {
+  margin-bottom: 100px;
+}
+
+.button-about {
+  display: flex;
+  align-items: center;
+  border: 4px solid black;
+  width: 50%;
+  height: 150px;
+  margin: 1.5% 0;
+  box-shadow: 10px 10px;
+  transition: all 0.25s ease-out 50ms;
+  cursor: pointer;
+}
+
+#about {
+  padding-top: 4%;
+  margin-bottom: 8%;
+}
+
+#card-1 {
+  background-color: var(--pink);
+  transform: rotate(2deg);
+  margin-left: 5%;
+}
+
+#card-2 {
+  background-color: var(--yellow);
+  transform: rotate(1deg);
+  margin-left: 10%;
+}
+
+#card-3 {
+  background-color: var(--orange);
+  margin-left: 15%;
+}
+
+#card-4 {
+  background-color: var(--green);
+  transform: rotate(-2deg);
+  margin-left: 10%;
+}
+
+#card-5 {
+  background-color: var(--blue);
+  transform: rotate(-3deg);
+  margin-left: 5%;
+}
+
+#card-1,
+#card-2,
+#card-3,
+#card-4,
+#card-5,
+#card-6 {
+  padding: 0 3%;
+}
+
+#card-1:hover,
+#card-2:hover,
+#card-3:hover,
+#card-4:hover,
+#card-5:hover {
+  transform: rotate(0);
+  transform: scale(1.1);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: black;
+  color: white;
+  text-align: center;
+  height: 200px;
+}
+
+#hero {
+  height: 100%;
+}
+
+.resizer {
+  width: 20vw;
+  height: 150px;
+  max-height: 300px;
+  overflow: hidden;
+  opacity: 0;
+  resize: both;
+}
+
+#text {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: end;
+  height: 30vh;
+  margin-right: 10%;
+}
+
+#poem {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: oblique;
+  text-align: right;
+}
+
+#poem span p {
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+#poem path {
+  animation: color-change 10s linear infinite;
+  stroke: black;
+  stroke-width: 20;
+}
+
+.wrap {
+  width: min-content;
+  position: absolute;
+  top: 120px;
+}
+
+.x {
+  pointer-events: none;
+  position: absolute;
+  bottom: -650px;
+  left: calc(100% - 20px);
+  line-height: 0;
+  font-size: 50px;
+}
+
+.x span .fa-cat {
+  white-space: nowrap;
+  vertical-align: middle;
+  color: red;
+  display: inline-block;
+  transform: translate(45px, -50px);
+  animation: color-change 10s linear infinite;
+  stroke: black;
+  stroke-width: 4;
+}
